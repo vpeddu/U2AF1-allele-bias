@@ -1,14 +1,19 @@
 input_ch = Channel.fromPath(params.inputFolder)
 
 process runOpossum {
+    container 'quay.io/vpeddu/u2af1-allele-bias:latest'
+    publishDir "${params.OUTDIR}", mode: 'symlink'
+
     input:
-    file query from query_ch
+    file BAM from input_ch
 
     output:
     file "top_hits.txt" into top_hits_ch
 
     """
-    blastp -db $db -query $query -outfmt 6 > blast_result
-    cat blast_result | head -n 10 | cut -f 2 > top_hits.txt
+    basename=`echo ${BAM} | cut -d . -f1`
+    echo \$basename
     """
 }
+
+python Platypus.py --callVariants --bamFiles input.bam --refFile ref.fasta --filterDuplicates 0 --minMapQual 0 --minFlank 0 --maxReadLength 500 --minGoodQualBases 10 --minBaseQual 20 -o variants.vcf
