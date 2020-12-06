@@ -3,10 +3,9 @@ input_ch = Channel.fromPath("${params.inputFolder}/*.bam")
 referenceFasta = file("${params.referenceFasta}")
 
 process samtoolsAddMD {
-    container 'biocontainers/samtools:v1.9-4-deb_cv1'
+    container 'jweinstk/samtools:latest'
     containerOptions = "--user root"
-    cpus 6
-    memory 12.GB
+
     input:
     file bam from input_ch
     file referenceFasta
@@ -27,7 +26,6 @@ process samtoolsAddMD {
     """
 }
 
-//python Platypus.py --callVariants --bamFiles input.bam --refFile ref.fasta --filterDuplicates 0 --minMapQual 0 --minFlank 0 --maxReadLength 500 --minGoodQualBases 10 --minBaseQual 20 -o variants.vcf
 
 
 
@@ -58,4 +56,3 @@ process runOpossum {
     """
 }
 
-//python Platypus.py --callVariants --bamFiles input.bam --refFile ref.fasta --filterDuplicates 0 --minMapQual 0 --minFlank 0 --maxReadLength 500 --minGoodQualBases 10 --minBaseQual 20 -o variants.vcf
