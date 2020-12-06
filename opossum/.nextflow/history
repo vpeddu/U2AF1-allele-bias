@@ -1,0 +1,42 @@
+2020-12-05 12:44:51	-	magical_heyrovsky	-	e41fdb7df8b2a25ae16bdfeb28942509	fb5030e5-4b9c-46bf-9c59-047a5afbc758	nextflow run opossum_wrapper.nf --input ../test_bams/
+2020-12-05 12:45:01	-	fabulous_becquerel	-	41318d8196a02ba2d76889c0b265c8d3	4d0854dc-5d23-4923-bbda-8224cb64d7dc	nextflow run opossum_wrapper.nf --input ../test_bams/
+2020-12-05 12:45:21	2.2s	pensive_waddington	ERR	41318d8196a02ba2d76889c0b265c8d3	bbb4b373-b196-42d5-a3ce-b8e81912756a	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 12:45:33	2.5s	tender_volta	OK	5ab7a3da1f57b7426686f38ce2dbaca7	d329e470-dc22-4b72-a107-65329fef1859	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 12:46:00	1.9s	sharp_ptolemy	OK	5ab7a3da1f57b7426686f38ce2dbaca7	7ae2fd66-8524-40be-b4cc-e254bc566137	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 12:47:08	1.9s	infallible_galileo	OK	a46d4db5ee13d3ddc14ed5ab7b3a30b5	5777a6d7-ad1f-472c-92e4-814e393cb9a4	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 12:47:53	1.6s	awesome_fermi	OK	0cb21ff227d862ddd596675907960d69	231ddc3a-0b86-4bbe-81cf-95ddbfcf5385	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 12:48:44	2.5s	big_saha	OK	a4e2b4fbd32c72e1261a07134e78c868	cdcc12fc-379d-4fe3-a226-8ee6615a3b9b	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 12:49:53	2.8s	tender_ride	ERR	c16d70d77d265b7de3c3a96fd3896234	f821294f-df43-43ad-9798-5a228d4d54fd	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 12:51:19	2.3s	reverent_kare	ERR	6070229c134689aa2fdd5a5c83a82241	4b4b08a6-f7bb-406d-9f8b-0314bea28ffd	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 12:51:32	48s	condescending_becquerel	ERR	6070229c134689aa2fdd5a5c83a82241	2ef4cc96-6ab8-49c1-9f84-c2c83ce2762a	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/ -with-docker 'ubuntu:18.04'
+2020-12-05 12:53:11	3.9s	boring_bardeen	ERR	2a5a84e7cc8fe1835546127e8d8be647	8fa8be8e-e0a4-42da-af11-79ec9d840a48	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/ -with-docker 'ubuntu:18.04'
+2020-12-05 12:57:38	4s	gloomy_yalow	ERR	2a5a84e7cc8fe1835546127e8d8be647	2e2a5fff-8541-48f0-a91e-110c13a8649d	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/ -with-docker 'ubuntu:18.04' -latest
+2020-12-05 12:58:38	4s	romantic_tuckerman	ERR	2a5a84e7cc8fe1835546127e8d8be647	b4a765ab-ab84-4329-b888-3b6354b29835	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/ -with-docker 'ubuntu:18.04' -latest
+2020-12-05 13:00:06	3.2s	voluminous_meninsky	OK	c8cc3cc2cf33016d11cfcfc5676c624e	b42a3841-c334-449b-85cb-fa0b862460f1	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/ -with-docker 'ubuntu:18.04' -latest
+2020-12-05 13:00:15	3.9s	evil_swanson	OK	c8cc3cc2cf33016d11cfcfc5676c624e	4971db92-8755-4556-8c64-2524b4840179	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/ -with-docker 'ubuntu:18.04' -latest
+2020-12-05 13:01:41	3.7s	lonely_morse	OK	c8cc3cc2cf33016d11cfcfc5676c624e	43037946-7f29-4009-82e4-396944a9d84f	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/ -with-docker 'ubuntu:18.04'
+2020-12-05 13:01:50	3.2s	goofy_allen	OK	c8cc3cc2cf33016d11cfcfc5676c624e	8d26f857-d61d-4235-91bd-37a7ff53851c	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/ -with-docker 'ubuntu:18.04'
+2020-12-05 13:04:15	3.5s	cranky_pesquet	OK	c8cc3cc2cf33016d11cfcfc5676c624e	04b336b9-9fae-4183-baae-f839d527661a	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:16.04' --inputFolder ../test_bams/
+2020-12-05 13:04:23	2.8s	curious_albattani	OK	c8cc3cc2cf33016d11cfcfc5676c624e	1f0774fd-e4e2-4be0-a1f2-1f9edf777c50	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:16.04' --inputFolder ../test_bams/
+2020-12-05 13:06:35	3.3s	backstabbing_jepsen	OK	5c8aa8bc1f1679818eeb36c0b216ba28	d767ef3f-ebb7-4872-8518-d38ac2451b00	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 13:06:49	3.1s	distracted_kimura	OK	5c8aa8bc1f1679818eeb36c0b216ba28	1ad09f57-b21b-461f-a899-cd2496f6a673	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 13:07:24	-	angry_lamarr	-	b41046af35e11758c997564e7086b2c2	9c127499-b214-4f2e-bf66-0debbd474b16	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 13:07:39	-	magical_brattain	-	1797629ad22f55d6478596b85e8492b7	03e49372-ddcd-41d9-ae29-d422fd80e064	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 13:10:08	5.7s	irreverent_visvesvaraya	OK	93195cf70aad4e894aba3683978b75e5	7ecaaca0-3777-4b47-a405-42183e69e9cc	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 13:10:19	4.7s	trusting_sanger	OK	93195cf70aad4e894aba3683978b75e5	8c948037-1e6f-48b9-b642-9ff6535972f3	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 13:11:10	3.6s	fabulous_curie	ERR	93195cf70aad4e894aba3683978b75e5	77a845a7-145a-44c9-b6e8-1f96cc291454	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 13:12:19	7.4s	jovial_ampere	OK	0c09dc8524debeff16d32583917263ea	a63d470e-d190-4884-9581-f862321f76a7	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 13:13:19	5.8s	exotic_hamilton	OK	0c09dc8524debeff16d32583917263ea	2573d47d-efc2-41aa-acfc-c607516b07af	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 16:18:25	5.7s	ridiculous_church	ERR	9d25621d103bbaa434cb1196c3c648dc	74c2eeae-c5e2-417b-a812-442ef87fb7a7	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 16:26:11	3.5s	clever_aryabhata	ERR	9d25621d103bbaa434cb1196c3c648dc	79ba1260-9552-4944-bc78-1b77f71dee46	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 16:26:27	5.3s	reverent_lorenz	OK	0c09dc8524debeff16d32583917263ea	f24825de-01ec-4e77-ba5c-fc9affa58ea8	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 16:27:08	4.1s	maniac_nightingale	OK	dfe27f58180133f2b1e0b1e63223c3cc	9cef93ba-0ceb-4758-81df-64a8083a331a	nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+2020-12-05 16:46:19	4.1s	grave_davinci	OK	dfe27f58180133f2b1e0b1e63223c3cc	9aaa9031-28e0-4f3a-bd67-bec3e9779ba9	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 16:47:18	2.9s	sleepy_monod	ERR	1243c5135db1dfe58f3039fb33f51b3f	496559d0-4781-4a88-8de7-b0906afb4bce	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 16:48:29	4.7s	berserk_legentil	OK	bf6a2093a46fe7538061cd0d29815162	711e096b-6af9-4ac8-b1fd-6c4f2b4fe46a	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 16:50:00	11.1s	deadly_shirley	ERR	4ec1da2232b6b471fefef965a53869e2	87c88444-d69c-4e99-9253-f0766bca9cfb	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 16:50:55	12.8s	jolly_montalcini	ERR	f85c5a25047c0d766a1c7bcf26cd1ce5	08a9cfeb-0b1b-41c8-9c80-04b55a4a3aa6	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 16:51:41	13.4s	furious_nightingale	ERR	344e67133bb43de3176c153b49fbe092	a8ba6730-949c-4799-b8a6-375ca7aefe9d	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 16:52:59	4.8s	lonely_aryabhata	OK	c07e72e94d7f099170d9c6480c3faae4	d58b06d6-c576-45ec-8c3e-f2ee98c4d88c	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 16:53:19	3.3s	hungry_nightingale	OK	a904935fb111061f7b9cf75e55d5c8de	95959a09-7b8e-4dc5-b99f-655df7537a0d	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+2020-12-05 16:53:44	17.4s	determined_poitras	OK	8afad0eb1117761a4f3c60a6bda2f58b	b03fa4c2-d61e-46ef-b343-e8da89061a1b	nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/

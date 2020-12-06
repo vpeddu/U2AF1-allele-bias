@@ -1,0 +1,46 @@
+Dec-05 16:27:06.984 [main] DEBUG nextflow.cli.Launcher - $> nextflow run opossum_wrapper.nf --inputFolder ../test_bams/
+Dec-05 16:27:07.175 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.07.1
+Dec-05 16:27:07.195 [main] INFO  nextflow.cli.CmdRun - Launching `opossum_wrapper.nf` [maniac_nightingale] - revision: dfe27f5818
+Dec-05 16:27:07.231 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/nextflow.config
+Dec-05 16:27:07.232 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/nextflow.config
+Dec-05 16:27:07.276 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-05 16:27:07.993 [main] DEBUG nextflow.Session - Session uuid: 9cef93ba-0ceb-4758-81df-64a8083a331a
+Dec-05 16:27:07.993 [main] DEBUG nextflow.Session - Run name: maniac_nightingale
+Dec-05 16:27:07.994 [main] DEBUG nextflow.Session - Executor pool size: 8
+Dec-05 16:27:08.022 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.07.1 build 5412
+  Created: 24-07-2020 15:18 UTC (08:18 PDT)
+  System: Mac OS X 10.15.7
+  Runtime: Groovy 2.5.11 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01
+  Encoding: UTF-8 (UTF-8)
+  Process: 15037@MacBook-Pro-2.local [127.0.0.1]
+  CPUs: 8 - Mem: 16 GB (27.8 MB) - Swap: 3 GB (1.2 GB)
+Dec-05 16:27:08.042 [main] DEBUG nextflow.Session - Work-dir: /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/work [Mac OS X]
+Dec-05 16:27:08.042 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/bin
+Dec-05 16:27:08.194 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Dec-05 16:27:08.197 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-05 16:27:08.408 [main] DEBUG nextflow.Session - Session start invoked
+Dec-05 16:27:08.610 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-05 16:27:08.622 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: runOpossum
+Dec-05 16:27:08.673 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ../test_bams/; pattern: *.bam; options: [:]
+Dec-05 16:27:08.733 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:runOpossum` matches process runOpossum
+Dec-05 16:27:08.741 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-05 16:27:08.741 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-05 16:27:08.747 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-05 16:27:08.754 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Dec-05 16:27:08.915 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Dec-05 16:27:08.915 [main] DEBUG nextflow.Session - Session await
+Dec-05 16:27:09.200 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-05 16:27:09.208 [Task submitter] INFO  nextflow.Session - [ae/6d1333] Submitted process > runOpossum (3)
+Dec-05 16:27:09.225 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-05 16:27:09.226 [Task submitter] INFO  nextflow.Session - [29/80b7d7] Submitted process > runOpossum (2)
+Dec-05 16:27:10.767 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: runOpossum (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/work/29/80b7d77eb0cc096c53bb34f4e8da86]
+Dec-05 16:27:10.774 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-05 16:27:10.775 [Task submitter] INFO  nextflow.Session - [b9/24b356] Submitted process > runOpossum (1)
+Dec-05 16:27:10.821 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 3; name: runOpossum (3); status: COMPLETED; exit: 0; error: -; workDir: /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/work/ae/6d1333552943e77cf01aca9aac9acc]
+Dec-05 16:27:11.848 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 2; name: runOpossum (1); status: COMPLETED; exit: 0; error: -; workDir: /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/work/b9/24b356c2a35b39f3e292338cb4df61]
+Dec-05 16:27:11.851 [main] DEBUG nextflow.Session - Session await > all process finished
+Dec-05 16:27:11.952 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-05 16:27:11.965 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=3; failedCount=0; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=8.1s; failedDuration=0ms; cachedDuration=0ms;loadCpus=0; loadMemory=0; peakRunning=2; peakCpus=4; peakMemory=12 GB; ]
+Dec-05 16:27:12.063 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Dec-05 16:27:12.078 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

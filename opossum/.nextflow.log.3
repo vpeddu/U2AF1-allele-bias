@@ -1,0 +1,122 @@
+Dec-05 16:51:40.977 [main] DEBUG nextflow.cli.Launcher - $> nextflow run opossum_wrapper.nf -with-docker 'ubuntu:18.04' --inputFolder ../test_bams/
+Dec-05 16:51:41.123 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 20.07.1
+Dec-05 16:51:41.140 [main] INFO  nextflow.cli.CmdRun - Launching `opossum_wrapper.nf` [furious_nightingale] - revision: 344e67133b
+Dec-05 16:51:41.171 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/nextflow.config
+Dec-05 16:51:41.173 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/nextflow.config
+Dec-05 16:51:41.221 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Dec-05 16:51:41.855 [main] DEBUG nextflow.config.ConfigBuilder - Enabling execution in Docker container as requested by cli option `-with-docker ubuntu:18.04`
+Dec-05 16:51:41.906 [main] DEBUG nextflow.Session - Session uuid: a8ba6730-949c-4799-b8a6-375ca7aefe9d
+Dec-05 16:51:41.906 [main] DEBUG nextflow.Session - Run name: furious_nightingale
+Dec-05 16:51:41.907 [main] DEBUG nextflow.Session - Executor pool size: 8
+Dec-05 16:51:41.931 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 20.07.1 build 5412
+  Created: 24-07-2020 15:18 UTC (08:18 PDT)
+  System: Mac OS X 10.15.7
+  Runtime: Groovy 2.5.11 on Java HotSpot(TM) 64-Bit Server VM 1.8.0_144-b01
+  Encoding: UTF-8 (UTF-8)
+  Process: 25524@MacBook-Pro-2.local [127.0.0.1]
+  CPUs: 8 - Mem: 16 GB (29.4 MB) - Swap: 2 GB (1.1 GB)
+Dec-05 16:51:41.948 [main] DEBUG nextflow.Session - Work-dir: /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/work [Mac OS X]
+Dec-05 16:51:41.949 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/bin
+Dec-05 16:51:42.075 [main] DEBUG nextflow.Session - Observer factory: TowerFactory
+Dec-05 16:51:42.080 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Dec-05 16:51:42.279 [main] DEBUG nextflow.Session - Session start invoked
+Dec-05 16:51:42.486 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Dec-05 16:51:42.500 [main] DEBUG nextflow.Session - Workflow process names [dsl1]: runOpossum
+Dec-05 16:51:42.550 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: ../test_bams/; pattern: *.bam; options: [:]
+Dec-05 16:51:42.620 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:runOpossum` matches process runOpossum
+Dec-05 16:51:42.624 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Dec-05 16:51:42.624 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Dec-05 16:51:42.631 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Dec-05 16:51:42.637 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Dec-05 16:51:42.737 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Dec-05 16:51:42.737 [main] DEBUG nextflow.Session - Session await
+Dec-05 16:51:42.935 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-05 16:51:42.941 [Task submitter] INFO  nextflow.Session - [c4/f4bb0b] Submitted process > runOpossum (3)
+Dec-05 16:51:42.959 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-05 16:51:42.960 [Task submitter] INFO  nextflow.Session - [81/44a44f] Submitted process > runOpossum (2)
+Dec-05 16:51:53.964 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 1; name: runOpossum (2); status: COMPLETED; exit: 0; error: -; workDir: /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/work/81/44a44fcbd1d3f637109ec6171ca417]
+Dec-05 16:51:53.974 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Dec-05 16:51:53.974 [Task submitter] INFO  nextflow.Session - [2d/d80b3b] Submitted process > runOpossum (1)
+Dec-05 16:51:53.980 [Task monitor] DEBUG nextflow.processor.TaskProcessor - Process `runOpossum (2)` is unable to find [UnixPath]: `/Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/work/81/44a44fcbd1d3f637109ec6171ca417/$base.bam` (pattern: `$base.bam`)
+Dec-05 16:51:54.049 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'runOpossum (2)'
+
+Caused by:
+  Missing output file(s) `$base.bam` expected by process `runOpossum (2)`
+
+Command executed:
+
+  #!/bin/bash
+  # logging
+  ls -lah
+  
+  
+  base=`basename wgEncodeUwRepliSeqBg02esS1AlnRep1.R2.bam .bam | cut -d . -f1`
+  python2.7 /Opossum-master/Opossum.py --BamFile=wgEncodeUwRepliSeqBg02esS1AlnRep1.R2.bam --OutFile="$base.bam"
+
+Command exit status:
+  0
+
+Command output:
+  -rw-r--r-- 1 root root    0 Dec  6 00:51 .command.err
+  -rw-r--r-- 1 root root    0 Dec  6 00:51 .command.log
+  -rw-r--r-- 1 root root    0 Dec  6 00:51 .command.out
+  -rw-r--r-- 1 root root 3.3K Dec  6 00:51 .command.run
+  -rw-r--r-- 1 root root  219 Dec  6 00:51 .command.sh
+  lrwxr-xr-x 1 root root  130 Dec  6 00:51 wgEncodeUwRepliSeqBg02esS1AlnRep1.R2.bam -> /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/test_bams/wgEncodeUwRepliSeqBg02esS1AlnRep1.R2.bam
+  chr1
+  chr2
+  chr3
+  chr4
+  chr5
+  chr6
+  chr7
+  chr8
+  chr9
+  chr10
+  chr11
+  chr12
+  chr13
+  chr14
+  chr15
+  chr16
+  chr17
+  chr18
+  chr19
+  chr20
+  chr21
+  chr22
+  chrM
+  chrX
+  Number of discarded secondary reads:  0
+  Number of discarded improperly paired reads:  2308683
+  Number of discarded unmapped reads:  0
+  Number of reads whose mate is unmapped:  0
+  Number of discarded reads whose mate has been mapped to a different chromosome:  0
+  Number of discarded reads whose mate has been mapped to junk:  0
+  Number of discarded read pairs that are pointing outwards:  0
+  Number of discarded reads where read and its mate have been mapped in the same direction:  0
+  Number of discarded duplicate reads that are missing non-duplicate counterpart:  0
+  Number of duplicate reads that have been merged into their non-duplicate counterpart:  0
+  Number of duplicate single reads that have been merged to their non-duplicate counterpart:  0
+  Number of discarded reads containing hard clips:  0
+  Number of discarded read pairs with base mismatch:  0
+  Number of discarded read pairs that are not aligned to same exons:  0
+  Number of discarded reads / read pairs having too low mapping quality (threshold 40): 0
+  Number of merged read pairs:  0
+  Number of split merged read pairs:  0
+  Number of independently treated read pairs:  0
+  Number of individual reads:  0
+  Number of leftover reads:  0 0 0 0 0 0 0
+
+Work dir:
+  /Users/vikas/Documents/UCSC/rotations/Brooks/rotation_project/U2AF1-allele-bias/opossum/work/81/44a44fcbd1d3f637109ec6171ca417
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+Dec-05 16:51:54.066 [Task monitor] DEBUG nextflow.Session - Session aborted -- Cause: Missing output file(s) `$base.bam` expected by process `runOpossum (2)`
+Dec-05 16:51:54.133 [main] DEBUG nextflow.Session - Session await > all process finished
+Dec-05 16:51:54.133 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Dec-05 16:51:54.147 [main] WARN  n.processor.TaskPollingMonitor - Killing pending tasks (2)
+Dec-05 16:51:54.195 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=0; pendingCount=0; submittedCount=1; runningCount=-1; retriesCount=0; abortedCount=2; succeedDuration=0ms; failedDuration=21.8s; cachedDuration=0ms;loadCpus=-2; loadMemory=0; peakRunning=2; peakCpus=4; peakMemory=12 GB; ]
+Dec-05 16:51:54.401 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Dec-05 16:51:54.429 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

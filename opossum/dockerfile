@@ -12,6 +12,7 @@ RUN apt update && \
 RUN wget https://github.com/BSGOxford/Opossum/archive/master.zip -O Opossum.zip && \
   unzip Opossum.zip
 
+CMD ["/bin/bash"]
 #RUN apt update && \
     #apt install -y python pip #&& \
     #pip install biopython \
