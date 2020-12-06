@@ -2,3 +2,5 @@ test_data/*
 test_bams/* 
 work/*
 *work*
+output*
+tiny*
