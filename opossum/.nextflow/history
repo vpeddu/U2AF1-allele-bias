@@ -84,3 +84,4 @@
 2020-12-06 19:20:10	2.4s	determined_jennings	ERR	68d47b25b7387de672d6d786bfd723a2	0a83b18b-1cfe-417a-9606-d7373f98a7e3	nextflow run opossum_wrapper.nf --inputFolder ../tiny/ --outdir output/ --referenceFasta ../tiny/hg38.fa -resume
 2020-12-06 19:21:02	5.1s	serene_avogadro	ERR	68d47b25b7387de672d6d786bfd723a2	0a83b18b-1cfe-417a-9606-d7373f98a7e3	nextflow run opossum_wrapper.nf --inputFolder ../tiny/ --outdir output/ --referenceFasta ../tiny/hg38.fa -resume
 2020-12-06 19:21:38	2m 9s	thirsty_bhaskara	OK	9b9a6c502a39ee338ad2b7ba8a5cba32	0a83b18b-1cfe-417a-9606-d7373f98a7e3	nextflow run opossum_wrapper.nf --inputFolder ../tiny/ --outdir output/ --referenceFasta ../tiny/hg38.fa -resume
+2020-12-06 22:00:56	3m 55s	spontaneous_nightingale	OK	9b9a6c502a39ee338ad2b7ba8a5cba32	0a83b18b-1cfe-417a-9606-d7373f98a7e3	nextflow run opossum_wrapper.nf --inputFolder ../tiny/ --outdir output/ --referenceFasta ../tiny/hg38.fa -resume
