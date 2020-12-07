@@ -11,8 +11,8 @@ process samtoolsAddMD {
     file referenceFasta
 
     output: 
-    tuple env(outfilename), file("*.MD.bam") into samtoolsOut_ch
-    tuple file("*.fai"), file("*.bai") into fileIndex_ch
+    tuple env(outfilename), file("*.MD.bam"), file("*.fai"), file("*.bai") into samtoolsOut_ch
+    //tuple env(outfilename),  into fileIndex_ch
 
     """
     #!/bin/bash
@@ -40,10 +40,11 @@ process runOpossum {
     //cpus 1
     //memory 16.GB
     input:
-    tuple val(base), file(bam) from samtoolsOut_ch
+    tuple val(base), file(bam), file(fastaIndex), file(bamIndex) from samtoolsOut_ch
+    //tuple val(base), file(bam) from samtoolsOut_ch
 
     output: 
-    tuple val("${base}"), file("${base}.opossum.bam") into opossumOut_ch
+    tuple val("${base}"), file("${base}.opossum.bam"), file(fastaIndex), file(bamIndex)  into opossumOut_ch
 
     """
     #!/bin/bash
@@ -68,9 +69,10 @@ process runPlatypus {
     //cpus 1
     //memory 16.GB
     input:
-    tuple val(base), file(bam) from opossumOut_ch
+    //tuple val(base), file(bam) from opossumOut_ch
+    //tuple val(base) file(fastaIndex), file(bamindex) from fileIndex_ch
+    tuple val(base), file(bam), file(fastaIndex), file(bamIndex) from opossumOut_ch
     file referenceFasta
-    tuple file(fastaIndex), file(bamindex) from fileIndex_ch
 
     output: 
     file "${base}.platypus.vcf"
