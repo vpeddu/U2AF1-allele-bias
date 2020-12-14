@@ -5,3 +5,7 @@ work/*
 output*
 tiny*
 .nextflow.log*
+hisat2
+opossum/Opossum
+opossum/trimGalore
+opossum/test_bams
