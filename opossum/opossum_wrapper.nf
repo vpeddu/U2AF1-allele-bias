@@ -115,8 +115,8 @@ process samtoolsAddMD {
     tuple val(base), file(bam)  from opossumOut_ch
 
     output: 
-    tuple env(outfilename), file("*.MD.bam"), file("*.fai"), file("*.bai") into samtoolsOut_ch
-    tuple env(outfilename),  into fileIndex_ch
+    //tuple env(outfilename), file("*.MD.bam"), file("*.fai"), file("*.bai") into samtoolsOut_ch
+    tuple val("${base}"), file ("${bam}"), file("${base}.opossum.bam.bai")  into fileIndex_ch
 
     """
     #!/bin/bash
@@ -130,37 +130,39 @@ process samtoolsAddMD {
     """
 }
 
-// process runPlatypus {
-//     container 'iarcbioinfo/platypus-nf'
-//     containerOptions = "--user root"
-//     publishDir "${params.outdir}/Platypus" //, mode: 'symlink'
-//     //cpus 1
-//     //memory 16.GB
-//     input:
-//     tuple val(base), file(bam) from opossumOut_ch
-//     //tuple val(base) file(fastaIndex), file(bamindex) from fileIndex_ch
-//     file index from opossumFastaIndex_ch
-//     file referenceFasta
+process runPlatypus {
+    container 'iarcbioinfo/platypus-nf'
+    containerOptions = "--user root"
+    publishDir "${params.output}/Platypus" //, mode: 'symlink'
+    //cpus 1
+    //memory 16.GB
+    input:
+    tuple val(base), file(bam), file(bamIndex) from fileIndex_ch
+    //tuple val(base), file(bam) from opossumOut_ch.groupTuple().join(fileIndex_ch )
+    //tuple val(base) file(fastaIndex), file(bamindex) from fileIndex_ch
+    file index from opossumFastaIndex_ch
+    file referenceFasta
+ 
+    output: 
+    file "${base}.platypus.vcf"
 
-//     output: 
-//     file "${base}.platypus.vcf"
-
-//     """
-//     #!/bin/bash
-//     # logging
-//     ls -lah
+    """
+    #!/bin/bash
+    # logging
+    ls -lah
 
 
 
-//     platypus callVariants \
-//         --bamFiles ${bam} \
-//         --refFile ${referenceFasta} \
-//         --filterDuplicates 0 \
-//         --minMapQual 0 \
-//         --minFlank 0 \
-//         --maxReadLength 500 \
-//         --minGoodQualBases 10 \
-//         --minBaseQual 20 \
-//         -o ${base}.platypus.vcf
-//     """
-// }
+    platypus callVariants \
+        --bamFiles ${bam} \
+        --refFile ${referenceFasta} \
+        --filterDuplicates 0 \
+        --minMapQual 0 \
+        --minFlank 0 \
+        --maxReadLength 500 \
+        --minGoodQualBases 10 \
+        --minBaseQual 20 \
+        -o ${base}.platypus.vcf
+    """
+}
+
