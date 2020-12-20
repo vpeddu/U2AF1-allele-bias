@@ -133,7 +133,7 @@ process samtoolsAddMD {
 process runPlatypus {
     container 'iarcbioinfo/platypus-nf'
     containerOptions = "--user root"
-    publishDir "${params.output}/Platypus" //, mode: 'symlink'
+    publishDir "${params.output}/Platypus" , mode: 'copy', overwrite: true
     //cpus 1
     //memory 16.GB
     input:
@@ -144,7 +144,9 @@ process runPlatypus {
     file referenceFasta
  
     output: 
-    file "${base}.platypus.vcf"
+    file "${base}.platypus.vcf" 
+    file "${bamIndex}"
+    file "${bam}"
 
     """
     #!/bin/bash
